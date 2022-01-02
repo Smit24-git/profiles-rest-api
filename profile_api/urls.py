@@ -8,7 +8,9 @@ router = DefaultRouter()
 router.register('hello-viewset',
                 views.HelloViewSet,
                 base_name = 'hello-viewset')
-
+router.register('profile',views.UserProfileViewSet)
+#base_name is not required if you have queryset on views. 
+#base_name will be overwritten by queryset
 urlpatterns = [
     path('hello-view/',views.HelloApiView.as_view()),
     path('', include(router.urls)),
