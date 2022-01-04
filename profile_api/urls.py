@@ -9,6 +9,7 @@ router.register('hello-viewset',
                 views.HelloViewSet,
                 base_name = 'hello-viewset')
 router.register('profile',views.UserProfileViewSet)
+router.register('feed',views.UserProfileFeedViewSet)
 #base_name is not required if you have queryset on views.
 #base_name will be overwritten by queryset
 urlpatterns = [
